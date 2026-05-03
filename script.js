@@ -78,9 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check for saved theme in localStorage
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme) {
+        body.classList.remove('dark-theme', 'light-theme');
         body.classList.add(currentTheme);
         if (currentTheme === 'light-theme') {
             themeIcon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+            themeIcon.classList.replace('fa-sun', 'fa-moon');
         }
     }
 

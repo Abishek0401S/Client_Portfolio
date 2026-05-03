@@ -186,10 +186,12 @@ img {
 .logo a {
     font-size: 28px;
     font-weight: 700;
-    color: #fff; /* Always white in dark mode or hero */
+    color: #fff; /* Default to white for dark mode and hero section */
 }
 
-body.light-theme .navbar.scrolled .logo a {
+/* Logo color when navbar is scrolled or in sidebar */
+.navbar.scrolled .logo a,
+.sidebar .logo a {
     color: var(--text-color);
 }
 
@@ -860,15 +862,7 @@ body.light-theme .navbar.scrolled .hamburger div {
     }
 
     .navbar .logo a {
-        color: var(--text-color) !important;
-    }
-    
-    body.light-theme .navbar .logo a {
-        color: var(--text-color) !important;
-    }
-
-    body.dark-theme .navbar .logo a {
-        color: #fff !important;
+        color: var(--text-color);
     }
 
     .hero-name {
@@ -882,15 +876,25 @@ body.light-theme .navbar.scrolled .hamburger div {
 
 /*
     ========================
-    LIGHT THEME REFINEMENTS FOR HAMBURGER
+    LIGHT THEME REFINEMENTS FOR HAMBURGER & TOGGLE
     ========================
 */
-body.light-theme .hamburger div {
+.navbar.scrolled .hamburger div {
     background: var(--text-color);
 }
 
-body.light-theme .navbar.scrolled .hamburger div {
-    background: var(--text-color);
+.navbar.scrolled #theme-toggle {
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .navbar .hamburger div {
+        background: var(--text-color);
+    }
+    
+    .navbar #theme-toggle {
+        color: var(--text-color);
+    }
 }
 
 /*
