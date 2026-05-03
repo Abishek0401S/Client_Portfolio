@@ -43,6 +43,7 @@ body.light-theme {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -52,6 +53,7 @@ body {
     line-height: 1.6;
     transition: background-color 0.4s ease, color 0.4s ease;
     overflow-x: hidden;
+    width: 100%;
 }
 
 ul {
@@ -85,6 +87,13 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
 
 /*
@@ -124,6 +133,26 @@ img {
 .btn-solid:hover {
     background: transparent;
     color: var(--primary-color);
+}
+
+.btn-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+    .btn-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .btn-group .btn {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /*
@@ -392,6 +421,8 @@ body.light-theme .navbar.scrolled .hamburger div {
     color: var(--primary-color);
     margin-bottom: 10px;
     letter-spacing: 2px;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .hero-subtitle {
@@ -464,6 +495,12 @@ body.light-theme .navbar.scrolled .hamburger div {
     pointer-events: none;
 }
 
+@media (max-width: 768px) {
+    .section-number {
+        display: none;
+    }
+}
+
 /*
     ========================
     ABOUT SECTION
@@ -476,6 +513,13 @@ body.light-theme .navbar.scrolled .hamburger div {
 .about-image img {
     border-radius: 10px;
     box-shadow: 20px 20px 0px var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .about-image img {
+        box-shadow: 10px 10px 0px var(--primary-color);
+        margin-bottom: 20px;
+    }
 }
 
 .about-text .description {
@@ -630,7 +674,7 @@ body.light-theme .navbar.scrolled .hamburger div {
 
 .cert-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
     gap: 30px;
 }
 
@@ -860,7 +904,7 @@ body.light-theme .navbar.scrolled .hamburger div {
 
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
     gap: 30px;
     margin-top: 50px;
 }
@@ -1107,7 +1151,7 @@ body.light-theme .navbar.scrolled .hamburger div {
 
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
     gap: 30px;
 }
 
