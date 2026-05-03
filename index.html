@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amirthavalli L | SAP MM & Digital Marketing Portfolio</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Amirtha<span>valli</span></a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="#skills-dashboard"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                    <li><a href="#resume"><i class="fas fa-file-alt"></i> Career Path</a></li>
+                    <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar Navigation -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <a href="#">Amirtha<span>valli</span></a>
+            </div>
+            <div class="close-sidebar" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <nav class="sidebar-links">
+            <ul>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#skills-dashboard"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="#resume"><i class="fas fa-file-alt"></i> Career Path</a></li>
+                <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/amritaarvind" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:amritanarasi@gmail.com"><i class="far fa-envelope"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content reveal fade-in">
+            <div class="profile-img-container zoom-effect">
+                <img src="assets/profile.jpg" alt="Amirthavalli L" class="hero-profile-img">
+            </div>
+            <h1 class="hero-name">Amirthavalli L</h1>
+            <p class="hero-subtitle">SAP MM Functional Consultant | Digital Marketing Specialist</p>
+            <div class="scroll-down">
+                <span>Scroll Down</span>
+                <div class="line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container grid-2">
+            <div class="about-image reveal slide-left">
+                <img src="assets/profile.jpg" alt="Amirthavalli L" class="zoom-effect">
+            </div>
+            <div class="about-text reveal slide-right">
+                <span class="section-subtitle">Discover</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="underline"></div>
+                <p class="description">
+                    Highly organized SAP MM Professional with 7.5+ years of experience in S/4HANA implementation, configuration, and support. Expert in data migration (LSMW, LTMC) and procurement management.
+                </p>
+                <p class="description">
+                    I am also a <strong>Digital Marketing Specialist</strong>, leveraging data-driven strategies to enhance online presence. I am currently reaching <strong>A2 Level in German</strong> and am eager to bring my expertise to the German market.
+                </p>
+                
+                <div class="info-box grid-2">
+                    <div class="info-item"><strong>Name:</strong> Amirthavalli L</div>
+                    <div class="info-item"><strong>Experience:</strong> 7.5+ Years</div>
+                    <div class="info-item"><strong>Email:</strong> amritanarasi@gmail.com</div>
+                    <div class="info-item"><strong>Location:</strong> Bengaluru (Open to Germany)</div>
+                </div>
+
+                <div class="btn-group" style="display: flex; gap: 20px; align-items: center;">
+                    <a href="assets/Resume.pdf" download class="btn btn-solid">DOWNLOAD CV</a>
+                    <a href="#contact" class="btn btn-outline" style="display: inline-block;">GET IN TOUCH</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Languages Section -->
+        <div class="container languages-container reveal slide-up" style="margin-top: 60px;">
+            <div class="section-header">
+                <h3 class="resume-title"><i class="fas fa-language"></i> Languages</h3>
+            </div>
+            <div class="languages-grid">
+                <div class="lang-item">
+                    <span class="lang-name">Tamil (Fluent)</span>
+                    <div class="progress-bar"><div class="progress" data-width="100%"></div></div>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">English (Fluent)</span>
+                    <div class="progress-bar"><div class="progress" data-width="100%"></div></div>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">Kannada (Intermediate)</span>
+                    <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">German (A2 Level)</span>
+                    <div class="progress-bar"><div class="progress" data-width="40%"></div></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-number">01</div>
+    </section>
+
+    <!-- Skills Dashboard -->
+    <section id="skills-dashboard" class="skills-dashboard section-padding">
+        <div class="container">
+            <div class="section-header reveal fade-in">
+                <span class="section-subtitle">Analytical View</span>
+                <h2 class="section-title">Skills Dashboard</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="chart-card reveal slide-up">
+                    <h3>Technical Expertise (SAP)</h3>
+                    <canvas id="sapChart"></canvas>
+                </div>
+                <div class="chart-card reveal slide-up" style="animation-delay: 0.1s;">
+                    <h3>Domain Distribution</h3>
+                    <canvas id="distributionChart"></canvas>
+                </div>
+                <div class="chart-card reveal slide-up" style="animation-delay: 0.2s;">
+                    <h3>Marketing & Tools</h3>
+                    <canvas id="toolsChart"></canvas>
+                </div>
+                <!-- New Charts -->
+                <div class="chart-card reveal slide-up" style="animation-delay: 0.3s;">
+                    <h3>Ticket Handling (FY)</h3>
+                    <canvas id="ticketChart"></canvas>
+                </div>
+                <div class="chart-card reveal slide-up" style="animation-delay: 0.4s;">
+                    <h3>Experience Distribution</h3>
+                    <canvas id="experienceChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="section-number">02</div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section section-padding">
+        <div class="container">
+            <div class="section-header reveal fade-in">
+                <span class="section-subtitle">Career Path</span>
+                <h2 class="section-title">Experience & Education</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="resume-container">
+                <div class="experience reveal slide-left">
+                    <h3 class="resume-title"><i class="fas fa-briefcase"></i> Work Experience</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">09/2023 - Present</div>
+                            <h3>SAP-Support Executive</h3>
+                            <div class="company">Ace Designers - Bengaluru</div>
+                            <p>Leading SAP S/4HANA implementation and support, MM configuration, and data migration.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">01/2022 - 04/2022</div>
+                            <h3>Customer Support Representative</h3>
+                            <div class="company">Srishti Tales - Bangalore</div>
+                            <p>Technical support and complex system navigation to resolve customer inquiries.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">06/2014 - 09/2015</div>
+                            <h3>Support Officer</h3>
+                            <div class="company">NS&I Atos - Chennai</div>
+                            <p>Managed credit transactions and ensured UK Finance compliance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education reveal slide-right">
+                    <h3 class="resume-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">Completed</div>
+                            <h3>Master of Computer Applications</h3>
+                            <div class="company">ICE University - India</div>
+                            <p>Advanced study in software development and systems management.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Completed</div>
+                            <h3>Bachelor of Science, Physics</h3>
+                            <div class="company">Alagappa University - Tamil Nadu</div>
+                            <p>Foundation in analytical thinking and scientific principles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-number">03</div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section-padding">
+        <div class="container">
+            <div class="section-header reveal fade-in">
+                <span class="section-subtitle">What People Say</span>
+                <h2 class="section-title">Testimonials</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal slide-up">
+                    <div class="company-name">Ace Designers</div>
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">Amirthavalli is a highly dedicated SAP professional. Her attention to detail in MM configuration and data migration is exceptional. She managed complex S/4HANA migrations with ease and professionalism.</p>
+                    <div class="testimonial-context">
+                        <span><i class="fas fa-users"></i> Project & Technical Team</span>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal slide-up" style="animation-delay: 0.1s;">
+                    <div class="company-name">Srishti Tales</div>
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">Her ability to integrate Digital Marketing strategies with technical SAP insights provided a unique value to our project's visibility. Efficient, technical, and a great communicator.</p>
+                    <div class="testimonial-context">
+                        <span><i class="fas fa-user-tie"></i> Business & Strategy Unit</span>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal slide-up" style="animation-delay: 0.2s;">
+                    <div class="company-name">NS&I Atos</div>
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">Demonstrated exceptional proficiency in managing credit transactions and ensuring compliance. A reliable professional with a strong grasp of functional processes.</p>
+                    <div class="testimonial-context">
+                        <span><i class="fas fa-check-circle"></i> Operations & Compliance Dept</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-number">04</div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications section-padding">
+        <div class="container">
+            <div class="section-header reveal fade-in">
+                <span class="section-subtitle">Achievements</span>
+                <h2 class="section-title">Certifications</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="cert-grid">
+                <div class="cert-card clickable reveal slide-up" onclick="window.open('https://ude.my/UC-d9d9d2eb-ce18-4c42-a116-9b572b8d02d0', '_blank')">
+                    <img src="assets/SAP_MM_Certificate.jpeg" alt="SAP MM Certificate" class="cert-image zoom-effect">
+                    <h3>SAP MM Functional Consultant</h3>
+                    <div class="cert-issuer">Udemy</div>
+                    <div class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></div>
+                </div>
+                <div class="cert-card reveal slide-up" style="animation-delay: 0.1s;">
+                    <img src="assets/JIRA Certificate.jpg" alt="JIRA Certificate" class="cert-image zoom-effect">
+                    <h3>Introduction to JIRA</h3>
+                    <div class="cert-issuer">Simplilearn SkillUp</div>
+                </div>
+                <div class="cert-card reveal slide-up" style="animation-delay: 0.2s;">
+                    <img src="assets/Claude 101.jpg" alt="Claude 101 Certificate" class="cert-image zoom-effect">
+                    <h3>Claude 101</h3>
+                    <div class="cert-issuer">Anthropic</div>
+                </div>
+            </div>
+        </div>
+        <div class="section-number">05</div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="section-header reveal fade-in">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info reveal slide-left">
+                    <div class="info-item">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>amritanarasi@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 9884552975</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon"><i class="fab fa-linkedin"></i></div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://www.linkedin.com/in/amritaarvind" target="_blank" style="color: var(--primary-color);">linkedin.com/in/amritaarvind</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Bengaluru, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form reveal slide-right">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-solid">Send Message</button>
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="section-number">06</div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h2>Amirtha<span>valli</span></h2>
+                    <p>Experienced SAP MM Functional Consultant and Digital Marketing Specialist based in Bengaluru, helping businesses optimize procurement processes and enhance digital visibility.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/amritaarvind" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:amritanarasi@gmail.com"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills-dashboard">Dashboard</a></li>
+                        <li><a href="#resume">Career Path</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone-alt" style="color: var(--primary-color); margin-right: 10px;"></i> +91 9884552975</li>
+                        <li><i class="fas fa-envelope" style="color: var(--primary-color); margin-right: 10px;"></i> amritanarasi@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--primary-color); margin-right: 10px;"></i> Bengaluru, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Amirthavalli L. All Rights Reserved.</p>
+                <p>Designed with <i class="fas fa-heart" style="color: var(--primary-color);"></i> for Germany Opportunities</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
