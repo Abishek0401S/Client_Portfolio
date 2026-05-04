@@ -325,21 +325,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /*
         ========================
-        CONTACT FORM HANDLING (EmailJS)
+        CONTACT FORM HANDLING (Formspree)
         ========================
     */
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
 
-    // EmailJS Credentials - IMPORTANT: Replace these with real ones
-    const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"; 
-    const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-    const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-
-    // Initialize EmailJS
-    if (window.emailjs) {
-        emailjs.init(EMAILJS_PUBLIC_KEY);
-    }
+    // Formspree Endpoint - IMPORTANT: Replace 'YOUR_FORMSPREE_ID' with your actual Formspree ID
+    const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORMSPREE_ID";
 
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -362,29 +355,44 @@ document.addEventListener('DOMContentLoaded', () => {
             
             showStatus('Sending message...', '');
 
-            // Real EmailJS sending logic
-            const templateParams = {
-                from_name: name,
-                reply_to: email,
-                message: message,
-                to_name: "Amirthavalli L" // Optional: update as needed
-            };
-
-            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
-                .then(() => {
+            // Formspree sending logic using fetch
+            fetch(FORMSPREE_ENDPOINT, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    message: message
+                })
+            })
+            .then(response => {
+                if (response.ok) {
                     showToast('Success', 'Thank you! Your message has been sent successfully.', 'success');
                     contactForm.reset();
                     showStatus('', ''); // Clear status text
-                })
-                .catch((error) => {
-                    console.error('EmailJS Error:', error);
-                    showToast('Error', 'Failed to send message. Please try again later.', 'error');
-                    showStatus('Failed to send message.', 'error');
-                })
-                .finally(() => {
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = originalBtnText;
-                });
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            showToast('Error', data["errors"].map(error => error["message"]).join(", "), 'error');
+                        } else {
+                            showToast('Error', 'Oops! There was a problem submitting your form', 'error');
+                        }
+                        showStatus('Failed to send message.', 'error');
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Formspree Error:', error);
+                showToast('Error', 'Failed to send message. Please try again later.', 'error');
+                showStatus('Failed to send message.', 'error');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+            });
         });
     }
 
