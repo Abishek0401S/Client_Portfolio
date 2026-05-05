@@ -332,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const formStatus = document.getElementById('formStatus');
 
     // Formspree Endpoint - IMPORTANT: Replace 'YOUR_FORMSPREE_ID' with your actual Formspree ID
-    const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORMSPREE_ID";
+    const FORMSPREE_ENDPOINT = "https://formspree.io/f/xykowqpz";
 
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
